@@ -1,0 +1,301 @@
+#wrapper {
+	display: block;
+	max-width: 95%;
+  	margin: auto;
+  	padding: 1%;
+  	color: #ffffff;
+  	font-family: 'Source Code Pro', monospace;
+}
+body {
+	display: block;
+	background-color: #e3a58a;
+	background-image: url("https://ob273.brighton.domains/ass1/Images/bi1.jpg");
+	color: #FFF;
+	font-size: 100%;
+	margin: 0;
+	width: auto;
+	height: auto;
+	font-family: 'Source Code Pro', monospace;
+}
+/*giving the error message a colored text*/
+.hint{
+	color: #ff0000;
+}
+/*used for elements or divs to be hidden or shown*/
+.hide {
+	display: none;
+}
+textarea,span{
+	display: block;
+}
+/*make the title larger*/
+.banner{
+	font-size: 135%;
+}
+/*this is to style the divs that are made to hold the data from the V&A api*/
+.looks{
+	display: inline-block;
+	border: 2px solid white;
+	padding: 15px;
+	max-height: 420px;
+	width: 260px;
+	border-radius: 13px;
+	margin: 5px 2px;
+}
+/*to style the text data from the json file*/
+.looks p{
+	color: #ffffff;
+	background-color: #000000;
+	margin: 5px;
+}
+/*to be able to center the appropriate content */
+.center{
+	text-align: center;
+	align-content: center;
+}
+/*give certain content inline-block*/
+.inBlock{
+	display: inline-block;
+}
+/*style the search div*/
+#searchArea{
+	margin: auto;
+	width: 70%;
+}
+/*more indepth stylign to the search area*/
+#searchForm fieldset{
+	display: block;
+	text-align: center;
+	margin: auto;
+	/*border: none;*/
+	border-radius: 15px;
+	padding: 0.35em;
+}
+/*to allow me to style the search bar */
+#search {
+	width: 85%;
+	padding: 10px;
+  	border: 1px solid white;
+	float: left;
+	height: 1.75em;
+	margin: auto;
+	border-radius: 15px;
+}
+/*to style the search button thats next to the search bar a with effects 
+and the image thats inside*/
+#searchButton {
+  	width: 10%;
+  	height: 3.15em;
+  	padding: 10px;
+  	background: transparent;
+  	color: white;
+  	margin: auto;
+  	float: right;
+ 	/*border: 1px solid grey;*/
+  	/*border-left: none;*/
+  	/*border: none;*/
+  	border-radius: 15px;
+ 	cursor: pointer;
+ 	background-image: url("https://ob273.brighton.domains/ass1/Images/iconnew2.png");
+ 	background-size: 100% 50%;
+ 	background-repeat: no-repeat;
+ 	background-position: center;
+ }
+ /*style the link colors to be visable on the background*/
+footer a{
+ 	color: #afeeee;
+ }
+ /*these are to set the appropriate divs to the grid layout*/
+.banner {
+	grid-area: banner;
+}
+main {
+	grid-area: main;
+}
+footer {
+	grid-area: footer;
+}
+/*this media query for mobile */
+@media (min-width: 15em) {
+	#wrapper {
+		display: grid;
+		grid-gap: 2rem; 
+		grid-template-areas:
+			"banner"
+			"main"
+			"footer";
+	}
+	/*this allows the corect title to be shown depending on the screen 
+	size that is being used*/
+	.webpage{
+		display: none;
+	}
+	.mobile{
+		display: block;
+	}
+	/*allow the search bar and button to be diffrent widths for 
+	diffrent screen sizes*/
+	#search {
+	width: 75%;
+	}	
+	#searchArea{
+	margin: auto;
+	width: 90%;
+	}
+	#searchButton{
+		width: 15%;
+		background-size: 90% 90%;
+	}
+}
+/*this media query for small webpages or/and ipad or tablets */
+@media (min-width: 26.6em) {
+  	#wrapper { 
+  	justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      "banner  banner"
+	  "main  main"
+      "footer  footer";
+  	}
+  	/*this allows the corect title to be shown depending on the screen 
+	size that is being used*/
+  	.webpage{
+		display: block;
+	}
+  	.mobile{
+  		display: none; 
+  	}
+  	/*allow the search bar and button to be diffrent widths for 
+	diffrent screen sizes*/
+  	#searchButton{
+   		width: 15%;
+		background-size: 90% 90%;
+	}
+	#search {
+	width: 70%;
+	}
+	#searchArea{
+	margin: auto;
+	width: 80%;
+	}
+	#searchForm fieldset{
+		width: 75%;
+	}
+}
+/*this media query for small to medium webpages */
+@media (min-width: 44em) {
+  	#wrapper {
+  	justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+      "banner  banner  banner"
+      "main  main  main"
+      "footer  footer  footer";
+   	}
+	/*this allows the corect title to be shown depending on the screen 
+	size that is being used*/
+   	.webpage{
+		display: block;
+	}
+   	.mobile{
+   		display: none; 
+   	}
+   	/*allow the search bar and button to be diffrent widths for 
+	diffrent screen sizes*/
+   	#search {
+	width: 75%;
+	}
+   	#searchButton{
+   		width: 13%;
+		background-size: 90% 90%;
+	}
+	#searchArea{
+	margin: auto;
+	width: 70%;
+	}
+	#searchForm fieldset{
+		width: 65%;
+	}
+	/*this is for the spacing at this resolution */
+	.looks{
+		margin: 15px;
+	}
+}
+/*this media query for medium to full webpages */
+@media (min-width: 60em) {
+  	#wrapper {
+  	justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+      "banner  banner  banner  banner"
+      "main  main  main  main"
+      "footer  footer  footer  footer";
+   	}
+	/*this allows the corect title to be shown depending on the screen 
+	size that is being used*/
+   	.webpage{
+		display: block;
+	}
+   	.mobile{
+   		display: none; 
+   	}
+   	/*allow the search bar and button to be diffrent widths for 
+	diffrent screen sizes*/
+   	#search {
+	width: 75%;
+	}
+   	#searchButton{
+   		width: 13%;
+		background-size: 70% 90%;
+	}
+	#searchArea{
+	margin: auto;
+	width: 70%;
+	}
+	#searchForm fieldset{
+		width: 55%;
+	}
+	/*this is for the spacing at this resolution */
+	.looks{
+		margin: 45px;
+	}
+}
+/*this media query for full webpages */
+@media (min-width: 75em) {
+  	#wrapper {
+  	justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+      "banner  banner  banner  banner"
+      "main  main  main  main"
+      "footer  footer  footer  footer";
+   	}
+   	/*this allows the corect title to be shown depending on the screen 
+	size that is being used*/
+   	.webpage{
+		display: block;
+	}
+   	.mobile{
+   		display: none; 
+   	}
+   	/*allow the search bar and button to be diffrent widths for 
+	diffrent screen sizes*/
+   	#search {
+	width: 78%;
+	}
+   	#searchButton{
+   		width: 10%;
+		background-size: 70% 90%;
+	}
+	#searchArea{
+	margin: auto;
+	width: 70%;
+	}
+	#searchForm fieldset{
+		width: 55%;
+	}
+	/*this is for the spacing at this resolution */
+	.looks{
+		margin: 45px;
+	}
+}

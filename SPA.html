@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--HTML5 doctype declaration -->
+<html lang="en"><!--default language of the document content -->
+<head>
+<meta charset=UTF-8>
+		<title>V&A API</title><!--web page title -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="CSS/normalize.css">
+		<link rel="stylesheet" type="text/css" href="CSS/SPACSS.css">
+		<script src="JavaScript/SPAJS.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="SPACSS">
+</head>
+
+<body>
+<!--Markup all web page content inside the 'body' tags -->
+	<div id="wrapper">
+	<a id="#top"></a>
+	<!--The 'wrapper' contains all the page content-->
+    <header class="banner center"><!--The main heading for the page -->
+		<h1 class="webpage">Victoria & Albert Museum</h1>
+		<h1 class="mobile">V&A Museum</h1>
+	</header>
+
+    <main><!--The main page content -->
+		<!-- this div is used for the form were the user can type in what they would like to search -->
+		<div id="searchArea">
+        <form  id="searchForm">
+        <fieldset>
+			<input type="text" id="search" placeholder="Search.." class="inBlock">
+			<button type="submit" id="searchButton" form="searchForm" class="inBlock">  </button>
+		</fieldset>
+		<!-- span used to show error message to  -->
+		<p class="center"><span id="search_error" class="hint hide">Must have 1 or more letter in the search bar to continue.</span></p>
+		</form>    	
+		</div>
+
+		<!-- this is used to show the results in a cleaner way -->
+		<header id="searchResults" class="hide">
+			<h2 class="center">Your Search Results </h2>
+		</header>
+
+		<!-- this div is used to display the loading gif for after you hit the search button -->
+		<div id="loading" class="hide center">
+			<h2>Loading</h2>
+			<img src="https://ob273.brighton.domains/ass1/Images/loadingGif.gif" alt="loading animation">
+		</div>
+
+		<!-- this is the div that shows the results from the search which is dynamically made via the javascript. -->
+		<div id="results" class="hide center">
+			
+		</div>
+    
+    </main><!--Close main page content -->  
+
+    <!--Footer content, used to have a link to the top of the webpage for mobile and anyone who wants to use it-->
+	<footer>
+		<p><a href="#top">Go to top </a></p>
+		<p>Email:<a href="mailto:E.S.ob273@brighton.ac.uk">Omar Butt</a></p>
+		<small>© 2020, Omar Butt</small>
+	</footer>
+
+	</div><!--Close 'wrapper' div -->
+
+
+</body><!--Close 'body' -->
+</html><!--Close 'html' -->
+
+<!-- this code was used to help me visulise what will be created dynamically
+when the javascript is run. -->
+<!-- <div id="">
+	<h2>Search Results</h2>
+	<img id="resultImg" src="" alt="Light Small">
+	<p id="resultObject"><br /></p>
+	<p id="resultArtist"><br /></p>
+	<p id="resultDate"><br /></p>
+	<p id="resultPlace"><br /></p>
+	<p><small>Royalty free &copy; Omar Butt</small></p>
+</div> -->
